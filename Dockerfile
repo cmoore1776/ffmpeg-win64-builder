@@ -1,4 +1,4 @@
-FROM --platform=amd64 ubuntu:20.04
+FROM --platform=linux/amd64 ubuntu:20.04
 
 VOLUME [ "/host" ]
 
@@ -26,6 +26,8 @@ RUN \
     git \
     gperf \
     libavresample-dev \
+    libc6-dev \
+    libglib2.0-0 \
     libtool \
     lsb-release \
     make \
