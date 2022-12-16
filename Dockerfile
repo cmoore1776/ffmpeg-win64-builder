@@ -32,6 +32,7 @@ RUN \
     lsb-release \
     make \
     meson \
+    mingw-w64 \
     nasm \
     p7zip-full \
     pax \
