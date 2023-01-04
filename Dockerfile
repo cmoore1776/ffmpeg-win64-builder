@@ -39,6 +39,7 @@ RUN \
     pkg-config \
     python-is-python3 \
     python3-distutils \
+    python3-setuptools \
     ragel \
     subversion \
     texinfo \
