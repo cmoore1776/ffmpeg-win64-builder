@@ -50,6 +50,8 @@ RUN \
   git clone https://github.com/rdp/ffmpeg-windows-build-helpers.git && \
   sed -i 's/config_options+=" --enable-libsvthevc"/# config_options+=" --enable-libsvthevc"/' /ffmpeg-windows-build-helpers/cross_compile_ffmpeg.sh && \
   sed -i 's/generic_configure "--build=\$host_target"/generic_configure "--host=\$host_target"/' /ffmpeg-windows-build-helpers/cross_compile_ffmpeg.sh && \
+  sed -i 's#libwebp_git "origin/main"#libwebp_git v1.2.4#' /ffmpeg-windows-build-helpers/cross_compile_ffmpeg.sh && \
+  sed -i 's#rdp/amf_headers.git#GPUOpen-LibrariesAndSDKs/AMF.git#' /ffmpeg-windows-build-helpers/cross_compile_ffmpeg.sh && \
   chmod +x /entrypoint.sh && \
   rm -rf /var/lib/apt/lists/
 
