@@ -52,6 +52,7 @@ RUN \
   sed -i 's/generic_configure "--build=\$host_target"/generic_configure "--host=\$host_target"/' /ffmpeg-windows-build-helpers/cross_compile_ffmpeg.sh && \
   sed -i 's#libwebp_git "origin/main"#libwebp_git v1.2.4#' /ffmpeg-windows-build-helpers/cross_compile_ffmpeg.sh && \
   sed -i 's#rdp/amf_headers.git#GPUOpen-LibrariesAndSDKs/AMF.git#' /ffmpeg-windows-build-helpers/cross_compile_ffmpeg.sh && \
+  sed -i '/cd lensfun_git/a apply_patch https://patch-diff.githubusercontent.com/raw/lensfun/lensfun/pull/1999.patch -p1' /ffmpeg-windows-build-helpers/cross_compile_ffmpeg.sh && \
   chmod +x /entrypoint.sh && \
   rm -rf /var/lib/apt/lists/
 
